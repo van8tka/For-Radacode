@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BlankVk.DataBlank">
+ 
+  <StackLayout>
+    <Label Text="Данные бланка" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large"/>
+   
+    <Label x:Name="UserNameData" VerticalOptions="Center" FontSize="Large"/>
+    <Label  x:Name="UserSurNameData" VerticalOptions="Center" FontSize="Large"/>
+    <Label  x:Name="CountryData" VerticalOptions="Center" FontSize="Large"/>
+    <Label  x:Name="CityData" VerticalOptions="Center" FontSize="Large" />
+    <Label  x:Name="UniverData" VerticalOptions="Center" FontSize="Large"/>
+  </StackLayout>
+  
+</ContentPage>

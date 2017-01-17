@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BlankVk.FormBlank">
+ 
+  <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+  
+    <Label Text="Бланк" HorizontalOptions="Center" />
+    <Label x:Name="ErrorUserName" TextColor="Red"/>
+     <Entry x:Name="UserName" Placeholder = "Имя" TextChanged="TextChangedUserName" />
+     <Label x:Name="ErrorUserSurName" TextColor="Red"/>
+    <Entry x:Name="UserSurName"  Placeholder = "Фамилия" TextChanged="TextChangedUserSurName"/>
+   
+    <Picker x:Name="Country" Title="Название страны" SelectedIndexChanged="SelectedPickerCountry"/>
+  
+    <Label x:Name="ErrorCity" TextColor="Red"/>
+    <Entry x:Name="City"  Placeholder = "Название города" TextChanged="TextChangedCity" />
+    <ListView x:Name="listviewCity" ItemSelected="SelectedlistviewCity" VerticalOptions="Center" HorizontalOptions="Center">
+
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <ViewCell.View>
+              <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <Label Text="{Binding title}"/>
+              </StackLayout>
+            </ViewCell.View>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+      
+    </ListView>
+    
+    <Label x:Name="ErrorUniver" TextColor="Red"/>
+    <Entry x:Name="Univer"  Placeholder = "Название университета" TextChanged="TextChangedUniver" />
+    <ListView x:Name="listviewUniver" ItemSelected="SelectedlistviewUniver" VerticalOptions="Center" HorizontalOptions="Center">
+
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <ViewCell.View>
+              <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                <Label Text="{Binding title}" />
+              </StackLayout>
+            </ViewCell.View>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+
+    </ListView>
+      
+    <Button x:Name ="ButtonFillBlank" Text="Заполнить бланк" Clicked="BtClickFillBlank" />
+    
+  </StackLayout>
+</ContentPage>
